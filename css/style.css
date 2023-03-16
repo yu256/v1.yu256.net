@@ -41,7 +41,7 @@ html {
 	gap: 32px;
 	font-size: 16px;
 	font-weight: bold;
-	margin-top: 24px;
+	margin-top: 20px;
 	white-space: nowrap;
 	overflow: clip;
   }
@@ -69,4 +69,12 @@ html {
 
   .sns {
 	font-size: 1.5em;
+  }
+
+  #header-currentitem {
+	padding-top: 5px;
+	font-size: 1.3em;
+  }
+  #currentlink {
+	color: blueviolet;
   }
