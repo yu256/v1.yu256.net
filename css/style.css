@@ -1,0 +1,62 @@
+html {
+	background-color: #f9f4f4;
+  }
+  
+  body {
+	line-height: 1.75;
+	font-size: 16px;
+	color: #333;
+	font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  }
+  
+  @media screen and (min-width: 768px) {
+	body {
+	  font-size: 18px;
+	}
+  }
+  .main {
+	width: 90%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 80px 0;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+  }
+
+  .header {
+	padding: 16px 24px;
+	background-color: #fafafa;
+  }
+  
+  .header-logo {
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+  }
+  
+  .header-list {
+	display: flex;
+	justify-content: center;
+	gap: 32px;
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 24px;
+  }
+
+  .title {
+	font-size: 2em;
+	text-decoration: underline;
+  }
+
+  .about {
+	padding: 10px;
+  }
+
+  .social {
+	padding: 10px;
+  }
+
+  .space {
+	padding: 5px;
+  }
