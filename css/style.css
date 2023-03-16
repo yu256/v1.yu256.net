@@ -43,6 +43,7 @@ html {
 	font-weight: bold;
 	margin-top: 24px;
 	white-space: nowrap;
+	overflow: clip;
   }
 
   .title {
@@ -64,4 +65,8 @@ html {
 
   .ul1 {
 	padding-left: 35px;
+  }
+
+  .sns {
+	font-size: 1.5em;
   }
