@@ -1,27 +1,8 @@
-doctype html
-html(lang="ja")
-    head
-        meta(charset="utf-8")
-        link(rel="stylesheet" href="./css/reset.css")
-        link(rel="stylesheet" href="./css/style.css")
-        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous")
-        meta(name="viewport" content="width=device-width, initial-scale=1")
-        title ゆーさいと
-        meta(name="description" content="ゆーのブログの一覧ページです。")
-        meta(name="format-detection" content="telephone=no")
-        //- link(rel="icon" href="favicon.ico")
-        //- link(rel="icon" href="favicon.svg" type="image/svg+xml")
-        //- link(rel="apple-touch-icon" href="webclip.png")
-        meta(property="og:locale" content="ja_JP")
-        meta(property="og:type" content="website")
-        meta(property="og:title" content="ゆーのブログ")
-        meta(property="og:description" content="ゆーのブログの一覧ページです。")
-        meta(property="og:url" content="https://yu256.net/")
-        meta(property="og:site_name" content="ゆーさいと")
-        //- meta(property="og:image" content="")
-        meta(name="twitter:card" content="summary_large_image")
-        meta(name="twitter:site" content="@yu256tw")
-    body
+extends ./assets/_template
+block page
+  - var page = 'blog';
+block div
+    div
         header.header
             h1.header-logo ゆーさいと
             nav.header-nav
