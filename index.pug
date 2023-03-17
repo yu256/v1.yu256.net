@@ -1,0 +1,69 @@
+doctype html
+html(lang="ja")
+    head
+        meta(charset="utf-8")
+        link(rel="stylesheet" href="./css/reset.css")
+        link(rel="stylesheet" href="./css/style.css")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title ゆーさいと
+        meta(name="description" content="ゆーのサイトです。備忘録やSNSへのリンクなどを書いておく場所。")
+        meta(name="format-detection" content="telephone=no")
+        //- link(rel="icon" href="favicon.ico")
+        //- link(rel="icon" href="favicon.svg" type="image/svg+xml")
+        //- link(rel="apple-touch-icon" href="webclip.png")
+        meta(property="og:locale" content="ja_JP")
+        meta(property="og:type" content="website")
+        meta(property="og:title" content="ゆーさいと")
+        meta(property="og:description" content="ゆーのサイトです。")
+        meta(property="og:url" content="https://yu256.net/")
+        meta(property="og:site_name" content="ゆーさいと")
+        //- meta(property="og:image" content="")
+        meta(name="twitter:card" content="summary_large_image")
+        meta(name="twitter:site" content="@yu256tw")
+    body
+        header.header
+            h1.header-logo ゆーさいと
+            nav.header-nav
+                ul.header-list
+                    li#header-currentitem: a#currentlink(href="https://yu256.net/") ホーム
+                    li: a.headeritem(href="https://yu256.net/blog") ブログ
+                    li: a.headeritem(href="" class="header-item") TODO
+                    li: a.headeritem(href="") TODO
+        main.main
+            h2.title About
+            p.space TODO
+            h2.title SNSアカウント
+            div.space
+                p.sns
+                    i.fa.fa-activitypub(aria-hidden="true")
+                    |  ActivityPub
+                p.link あかつきー（Misskeyフォークの自鯖）
+                ul.ul1: li.li1: a(rel="me" href="https://yumk.xyz/@y") @y@yumk.xyz
+                p.link Misskey.io
+                ul.ul1
+                    li.li1
+                        a(rel="me" href="https://misskey.io/@yu2") @yu2@misskey.io
+                p.link その他
+                ul.ul1
+                    li.li1: a(rel="me" href="https://beta.romneko.net/@y") @y@beta.romneko.net
+                    li.li1: a(rel="me" href="https://submarin.online/@yu") @yu@submarin.online
+                    li.li1: a(rel="me" href="https://misskey.m544.net/@yu1") @yu1@misskey.m544.net     
+                p.sns
+                    i.fa.fa-twitter(aria-hidden="true")
+                    |  Twitter
+                ul.ul1
+                    li.li1
+                        a(rel="me" href="https://twitter.com/yu256tw") @yu256tw
+                p.sns
+                    i.fa.fa-github(aria-hidden="true")
+                    |  GitHub
+                ul.ul1
+                    li.li1
+                        a(rel="me" href="https://github.com/yu256") @yu256
+                p.sns
+                    i.fa.fa-keybase(aria-hidden="true")
+                    |  Keybase
+                ul.ul1
+                    li.li1
+                        a(rel="me" href="https://keybase.io/yu1024") @yu1024
