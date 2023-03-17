@@ -77,3 +77,7 @@ html {
   .header-item {
 	color: blue;
   }
+
+  .footer {
+	text-align: center;
+  }
