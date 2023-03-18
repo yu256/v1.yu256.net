@@ -1,11 +1,3 @@
-@font-face {
-  font-family: "corporatelogomid";
-  src: url("https://yu256.net/assets/Corporate-Logo-Medium-ver3.otf") format("opentype");
-}
-@font-face {
-  font-family: "corporatelogobold";
-  src: url("https://yu256.net/assets/Corporate-Logo-Bold-ver3.otf") format("opentype");
-}
 html {
   background-color: #f9f4f4;
 }
@@ -18,6 +10,7 @@ body {
   margin: 0;
   font-size: 16px;
   color: #333;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 
 @media screen and (min-width: 768px) {
@@ -32,7 +25,6 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 45px;
-  font-family: "corporatelogomid";
 }
 
 header {
@@ -106,7 +98,6 @@ header div nav ul li a {
   text-align: center;
   font-size: 20px;
   margin-bottom: 24px;
-  font-family: "corporatelogobold";
 }
 @media screen and (min-width: 960px) {
   header div nav ul li a {
