@@ -1,78 +1,186 @@
 html {
-	background-color: #f9f4f4;
-  }
-  
+  background-color: #f9f4f4;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+@media screen and (min-width: 768px) {
   body {
-	font-size: 16px;
-	color: #333;
-	font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    font-size: 18px;
   }
-  
-  @media screen and (min-width: 768px) {
-	body {
-	  font-size: 18px;
-	}
-  }
-  .main {
-	width: 90%;
-	max-width: 960px;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-  }
+}
+.main {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+}
 
-  .header {
-	padding: 16px 24px;
-	background-color: #fafafa;
+header {
+  background-color: white;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+header div {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: inherit;
+  position: relative;
+}
+header div h1 {
+  width: 80px;
+}
+@media screen and (min-width: 960px) {
+  header div h1 {
+    width: 120px;
   }
-  
-  .header-logo {
-	text-align: center;
-	font-weight: bold;
-	font-size: 20px;
+}
+header div nav {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateX(100%);
+  background-color: #fff;
+  transition: ease 0.4s;
+}
+@media screen and (min-width: 960px) {
+  header div nav {
+    position: static;
+    transform: initial;
+    background-color: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: end;
+    width: 50%;
   }
-  
-  .header-list {
-	display: flex;
-	justify-content: center;
-	gap: 32px;
-	font-size: 16px;
-	font-weight: bold;
-	margin-top: 20px;
-	white-space: nowrap;
-	overflow: clip;
+}
+header div nav ul {
+  padding-top: 250px;
+  padding-bottom: 200px;
+  list-style: none;
+}
+@media screen and (min-width: 960px) {
+  header div nav ul {
+    padding-top: inherit;
+    padding-bottom: inherit;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: initial;
+    justify-content: space-between;
   }
+}
+header div nav ul li a {
+  color: black;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 960px) {
+  header div nav ul li a {
+    margin-bottom: 0;
+  }
+}
+header div nav ul li:last-child a {
+  margin-bottom: 0;
+}
+header div .hamburger {
+  width: 48px;
+  height: 100%;
+  background-color: transparent;
+  border-color: transparent;
+  z-index: 9999;
+}
+@media screen and (min-width: 960px) {
+  header div .hamburger {
+    display: none;
+  }
+}
+header div .hamburger span {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  position: relative;
+  transition: ease 0.4s;
+  display: block;
+}
+header div .hamburger span:nth-child(1) {
+  top: 0;
+}
+header div .hamburger span:nth-child(2) {
+  margin: 8px 0;
+}
+header div .hamburger span:nth-child(3) {
+  top: 0;
+}
+header div .active {
+  transform: translateX(0);
+}
+header div .active span:nth-child(1) {
+  top: 5px;
+  transform: rotate(45deg);
+}
+header div .active span:nth-child(2) {
+  opacity: 0;
+}
+header div .active span:nth-child(3) {
+  top: -13px;
+  transform: rotate(-45deg);
+}
 
-  .title {
-	font-size: 2em;
-	margin: 20px;
-	border-radius: 70px;
-	background: #f7ffdb;
-	box-shadow:  18px 18px 35px #d2d9ba,
-				 -18px -18px 35px #fffffc;
-  }
+.title {
+  font-size: 2em;
+  margin: 20px;
+  border-radius: 70px;
+  background: #f7ffdb;
+  box-shadow: 18px 18px 35px #d2d9ba, -18px -18px 35px #fffffc;
+}
 
-  .space {
-	padding: 10px;
-	line-height: 1.75;
-  }
+.space {
+  padding: 10px;
+  line-height: 1.75;
+}
 
-  .link {
-	padding-left: 15px;
-  }
+.link {
+  padding-left: 15px;
+}
 
-  .ul1 {
-	padding-left: 35px;
-  }
+.ul1 {
+  padding-left: 35px;
+}
 
-  .sns {
-	font-size: 1.5em;
-  }
+.sns {
+  font-size: 1.5em;
+}
 
-  .header-item {
-	color: rgb(95, 126, 33);
-  }
+.header-item {
+  color: rgb(95, 126, 33);
+}
 
-  .footer {
-	text-align: center;
-  }
+.footer {
+  text-align: center;
+  margin-bottom: 20px;
+}
