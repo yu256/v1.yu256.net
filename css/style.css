@@ -45,14 +45,6 @@ header div {
   height: inherit;
   position: relative;
 }
-header div h1 {
-  width: 80px;
-}
-@media screen and (min-width: 960px) {
-  header div h1 {
-    width: 120px;
-  }
-}
 header div nav {
   position: absolute;
   right: 0;
@@ -63,6 +55,9 @@ header div nav {
   transform: translateX(100%);
   background-color: #f6ffde;
   transition: ease 0.4s;
+}
+header div nav.active {
+  transform: translateX(0);
 }
 @media screen and (min-width: 960px) {
   header div nav {
@@ -107,19 +102,33 @@ header div nav ul li a {
 header div nav ul li:last-child a {
   margin-bottom: 0;
 }
-header div .hamburger {
+header div button {
   width: 48px;
   height: 100%;
   background-color: transparent;
   border-color: transparent;
   z-index: 9999;
 }
+header div button.active {
+  transform: translateX(0);
+}
+header div button.active span:nth-child(1) {
+  top: 5px;
+  transform: rotate(45deg);
+}
+header div button.active span:nth-child(2) {
+  opacity: 0;
+}
+header div button.active span:nth-child(3) {
+  top: -13px;
+  transform: rotate(-45deg);
+}
 @media screen and (min-width: 960px) {
-  header div .hamburger {
+  header div button {
     display: none;
   }
 }
-header div .hamburger span {
+header div button span {
   width: 100%;
   height: 1px;
   background-color: #000;
@@ -127,28 +136,14 @@ header div .hamburger span {
   transition: ease 0.4s;
   display: block;
 }
-header div .hamburger span:nth-child(1) {
+header div button span:nth-child(1) {
   top: 0;
 }
-header div .hamburger span:nth-child(2) {
+header div button span:nth-child(2) {
   margin: 8px 0;
 }
-header div .hamburger span:nth-child(3) {
+header div button span:nth-child(3) {
   top: 0;
-}
-header div .active {
-  transform: translateX(0);
-}
-header div .active span:nth-child(1) {
-  top: 5px;
-  transform: rotate(45deg);
-}
-header div .active span:nth-child(2) {
-  opacity: 0;
-}
-header div .active span:nth-child(3) {
-  top: -13px;
-  transform: rotate(-45deg);
 }
 
 .title {

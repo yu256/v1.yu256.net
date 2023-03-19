@@ -37,12 +37,6 @@ html {
 	right: 0;
 	z-index: 999;
 	div {
-		h1 {
-			width: 80px;
-			@media screen and (min-width: 960px) {
-				width: 120px;
-			}
-		}
 		padding: 0 20px;
 		display: flex;
 		align-items: center;
@@ -59,6 +53,9 @@ html {
 			transform: translateX(100%); 
 			background-color: #f6ffde;
 			transition: ease .4s;
+			&.active {
+				transform: translateX(0);
+			}
 			@media screen and (min-width: 960px) {
 				position: static;
 				transform: initial;
@@ -99,12 +96,26 @@ html {
 				}
 			}
 		}
-		.hamburger {
+		button {
 			width: 48px;
 			height: 100%;
 			background-color: transparent;
 			border-color: transparent;
 			z-index: 9999;
+			&.active {
+				transform: translateX(0);
+				span:nth-child(1) {
+					top: 5px;
+					transform: rotate(45deg);
+				}
+				span:nth-child(2) {
+					opacity: 0;
+				}
+				span:nth-child(3) {
+					top: -13px;
+					transform: rotate(-45deg);
+				}
+			}
 			@media screen and (min-width: 960px) {
 				display: none;
 			}
@@ -124,20 +135,6 @@ html {
 			}
 			span:nth-child(3) {
 				top: 0;
-			}
-		}
-		.active {
-			transform: translateX(0);
-			span:nth-child(1) {
-				top: 5px;
-				transform: rotate(45deg);
-			}
-			span:nth-child(2) {
-				opacity: 0;
-			}
-			span:nth-child(3) {
-				top: -13px;
-				transform: rotate(-45deg);
 			}
 		}
 	}
