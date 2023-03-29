@@ -49,25 +49,7 @@
     </main>
 </template>
 
-<style lang="scss">
-main {
-	width: 90%;
-	max-width: 960px;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	margin-top: 45px;
-}
-
-.title {
-	font-size: 2em;
-	margin: 20px;
-	border-radius: 70px;
-	background: #f7ffdb;
-	box-shadow:	18px 18px 35px #d2d9ba,
-				-18px -18px 35px #fffffc;
-}
-
+<style scoped lang="scss">
 .space {
 	padding: 10px;
 	line-height: 1.75;
@@ -83,4 +65,5 @@ main {
 
 .sns {
 	font-size: 1.5em;
-}</style>
+}
+</style>
