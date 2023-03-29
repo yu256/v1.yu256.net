@@ -1,4 +1,7 @@
 {
+  "target": "es2020",
+  "module": "esnext",
+  "strict": true,
   "extends": "@vue/tsconfig/tsconfig.web.json",
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
   "compilerOptions": {
