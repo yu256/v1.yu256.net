@@ -2,8 +2,6 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
@@ -18,73 +16,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@yu256tw">
     <title>ゆーねっと</title>
-    <script src="js/script.js" async></script>
   </head>
   <body>
-    <header>
-      <div>
-        <h1><a href="https://yu256.net/">ゆーねっと</a></h1>
-        <nav id="js-nav">
-          <ul>
-            <li><a href="https://yu256.net/"><i class="fa fa-home">&nbsp;&nbsp;ホーム</i></a></li>
-            <li><a href="https://yu256.net/blog"><i class="fa fa-pencil-square-o">ブログ</i></a></li>
-            <li><a href="">TODO</a></li>
-            <li><a href="">TODO</a></li>
-          </ul>
-        </nav>
-        <button id="js-hamburger" title="メニューを開く" type="button"><span></span><span></span><span></span></button>
-      </div>
-    </header>
-    <main>
-      <h2 class="title">About</h2>
-      <p class="space">ゆーのホームページです。HTMLとCSSの勉強を兼ねて（あとなんか面白そうだったのでPugも）SSGなし縛りで作ってみているだけのサイトです。<br>備忘録とかいろいろ書いていくところにしたい。</p>
-      <h2 class="title">SNSアカウント</h2>
-      <div class="space">
-        <p class="sns"><i class="fa fa-activitypub" aria-hidden="true"></i> ActivityPub</p>
-        <p class="link">あかつきー（Misskeyフォークの自鯖）</p>
-        <ul class="ul1">
-          <li><a rel="me" href="https://yumk.xyz/@y">@y@yumk.xyz</a></li>
-        </ul>
-        <p class="link">Misskey.io</p>
-        <ul class="ul1">
-          <li><a rel="me" href="https://misskey.io/@yu2">@yu2@misskey.io</a></li>
-        </ul>
-        <p class="link">その他</p>
-        <ul class="ul1">
-          <li><a rel="me" href="https://beta.romneko.net/@y">@y@beta.romneko.net</a></li>
-          <li><a rel="me" href="https://submarin.online/@yu">@yu@submarin.online</a></li>
-          <li><a rel="me" href="https://misskey.m544.net/@yu1">@yu1@misskey.m544.net</a></li>
-        </ul>
-        <p class="sns"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</p>
-        <ul class="ul1">
-          <li><a rel="me" href="https://twitter.com/yu256tw">@yu256tw</a></li>
-        </ul>
-        <p class="sns"><i class="fa fa-github" aria-hidden="true"></i> GitHub</p>
-        <ul class="ul1">
-          <li><a rel="me" href="https://github.com/yu256">@yu256</a></li>
-        </ul>
-        <p class="sns"><i class="fa fa-keybase" aria-hidden="true"></i> Keybase</p>
-        <ul class="ul1">
-          <li><a rel="me" href="https://keybase.io/yu1024">@yu1024</a></li>
-        </ul>
-        <p class="sns"><i class="fa fa-youtube-play" aria-hidden="true"></i> YouTube</p>
-        <ul class="ul1">
-          <li><a href="https://www.youtube.com/@yu_1024">@yu_1024</a></li>
-        </ul>
-        <p class="sns"><i class="fa solid fa-envelope" aria-hidden="true"></i> email</p>
-        <ul class="ul1">
-          <li><a href="mailto:yu@yu256.net">yu@yu256.net</a></li>
-        </ul>
-      </div>
-      <h2 class="title"><i class="fa fa-amazon" aria-hidden="true"></i>干し芋のリスト</h2>
-      <div class="space">
-        <ul class="ul1">
-          <li><a href="https://www.amazon.jp/hz/wishlist/ls/3HOBLVBUU8DP9?ref_=wl_share">ほしい物リスト</a></li>
-        </ul>
-      </div>
-    </main>
-    <footer>
-      <p>© 2023 yu256</p>
-    </footer>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
