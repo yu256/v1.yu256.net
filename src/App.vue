@@ -1,13 +1,38 @@
-html {
-	background-color: #f9f4f4;
-}
+<script lang="ts" setup>
+import { ref } from 'vue'
+import { RouterLink, RouterView } from 'vue-router'
 
-a {
-	text-decoration: none;
+const navActive = ref(false)
+const toggleNav = () => {
+  navActive.value = !navActive.value
 }
+</script>
 
+<template>
+  <header>
+    <div>
+      <h1><RouterLink to="/">ゆーねっと</RouterLink></h1>
+      <nav :class="{ active: navActive }">
+        <ul>
+          <li><RouterLink to="/" @click="toggleNav"><i class="fa fa-home">&nbsp;&nbsp;ホーム</i></RouterLink></li>
+          <li><RouterLink to="/blog" @click="toggleNav"><i class="fa fa-pencil-square-o">ブログ</i></RouterLink></li>
+		  <li><RouterLink to="/blog" @click="toggleNav"><i class="fa fa-pencil-square-o">TODO</i></RouterLink></li>
+		  <li><RouterLink to="/blog" @click="toggleNav"><i class="fa fa-pencil-square-o">TODO</i></RouterLink></li>
+        </ul>
+      </nav>
+      <button @click="toggleNav" :class="{ active: navActive }" title="メニューを開く" type="button"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <RouterView />
+  <footer>
+      <p>© 2023 yu256</p>
+  </footer>
+</template>
+
+<style scoped lang="scss">
+@import "./assets/base.scss";
 header {
-	background-color: white;
+	background-color: white !important;
 	width: 100%;
 	height: 50px;
 	position: fixed;
@@ -120,53 +145,8 @@ header {
 		}
 	}
 }
-
-body {
-	margin: 0;
-	font-size: 16px;
-	color: #333;
-	font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-	@media screen and (min-width: 768px) {
-		font-size: 18px;
-	}
-}
-
-main {
-	width: 90%;
-	max-width: 960px;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	margin-top: 45px;
-}
-
 footer {
 	text-align: center;
 	margin-bottom: 20px;
 }
-
-.title {
-	font-size: 2em;
-	margin: 20px;
-	border-radius: 70px;
-	background: #f7ffdb;
-	box-shadow:	18px 18px 35px #d2d9ba,
-				-18px -18px 35px #fffffc;
-}
-
-.space {
-	padding: 10px;
-	line-height: 1.75;
-}
-
-.link {
-	padding-left: 15px;
-}
-
-.ul1 {
-	padding-left: 35px;
-}
-
-.sns {
-	font-size: 1.5em;
-}
+</style>

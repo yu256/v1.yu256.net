@@ -17,15 +17,11 @@
     <meta name="twitter:site" content="@yu256tw">
     <title>ゆーねっと</title>
     <script>
-      (function (l) {
-        if (l.hash) {
-          window.history.replaceState(null, null, l.hash.slice(1));
-        }
-      })(window.location);
+        (function (l) {
+          l.replace(l.origin + "/#" + l.pathname);
+        })(window.location);
     </script>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    404 Not Found
   </body>
-</html>
