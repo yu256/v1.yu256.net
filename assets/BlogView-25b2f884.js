@@ -1,1 +1,0 @@
-import{_ as e,o as t,c,a as o}from"./index-4fe2a783.js";const s={},a=o("h2",{class:"title"},"TODO",-1),n=[a];function _(r,l){return t(),c("main",null,n)}const d=e(s,[["render",_]]);export{d as default};
