@@ -24,9 +24,9 @@
 import moment from 'moment';
 
 const items = [
-  { imgUrl: "/src/assets/img/img1.jpg", tag: "タグ1", title: "タイトル1", date: "20230331" },
-//  { imgUrl: "/src/assets/img/img2.jpg", tag: "タグ2", title: "タイトル2", date: "20230101" },
-//  { imgUrl: "/src/assets/img/img3.jpg", tag: "タグ3", title: "タイトル3", date: "20230101" },
+  { imgUrl: "/img/img1.jpg", tag: "タグ1", title: "タイトル1", date: "20230331" },
+//  { imgUrl: "/img/img2.jpg", tag: "タグ2", title: "タイトル2", date: "20230101" },
+//  { imgUrl: "/img/img3.jpg", tag: "タグ3", title: "タイトル3", date: "20230101" },
 ];
 const formatDate = (date: string): string => {
   const diffDays = moment().diff(date, "days");
