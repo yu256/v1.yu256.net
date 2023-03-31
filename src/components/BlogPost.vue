@@ -2,7 +2,7 @@
   <div class="grid">
     <div class="card" v-for="(item, index) in items" :key="index">
       <div class="card__image">
-        <img :src="item.imgUrl" alt="">
+        <img :src="`/img/img${index + 1}.jpg`" alt="">
         <div class="card__overlay indigo">
           <div class="card__overlay-content">
             <ul class="card__meta">
@@ -24,9 +24,9 @@
 import moment from 'moment';
 
 const items = [
-  { imgUrl: "/img/img1.jpg", tag: "タグ1", title: "タイトル1", date: "20230331" },
-//  { imgUrl: "/img/img2.jpg", tag: "タグ2", title: "タイトル2", date: "20230101" },
-//  { imgUrl: "/img/img3.jpg", tag: "タグ3", title: "タイトル3", date: "20230101" },
+  { tag: "タグ1", title: "タイトル1", date: "20230331" },
+//  { tag: "タグ2", title: "タイトル2", date: "20230101" },
+//  { tag: "タグ3", title: "タイトル3", date: "20230101" },
 ];
 const formatDate = (date: string): string => {
   const diffDays = moment().diff(date, "days");
