@@ -1,9 +1,9 @@
 <template>
-  <div class="grid">
+  <div class="container">
     <div class="card" v-for="(item, index) in items" :key="index">
       <div class="card__image">
         <img :src="`/img/img${index + 1}.jpg`" alt="">
-        <div class="card__overlay indigo">
+        <div class="card__overlay" :class="index % 2 === 0 ? 'blue' : 'indigo'">
           <div class="card__overlay-content">
             <ul class="card__meta">
               <li><a href=""><i class="fa fa-tag"></i>{{ item.tag }}</a></li>
@@ -64,13 +64,11 @@ a:hover {
   text-decoration: underline !important;
 }
 
-.grid {
+.container {
   float: none;
   width: 100%;
-  padding-left: 0.6em;
   padding-right: 0.2em;
   padding-bottom: 0.4em;
-  padding-top: 2em;
   @media screen and (min-width: 40.063em) {
     float: left;
     width: 33.333%;
