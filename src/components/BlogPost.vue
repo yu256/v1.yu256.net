@@ -1,19 +1,14 @@
 <template>
-  <div class="container">
-    <div class="card" v-for="(item, index) in items" :key="index">
-      <div class="card__image">
-        <img :src="`/img/img${index + 1}.jpg`" alt="">
-        <div class="card__overlay" :class="index % 2 === 0 ? 'blue' : 'indigo'">
-          <div class="card__overlay-content">
-            <ul class="card__meta">
-              <li><a href=""><i class="fa fa-tag"></i>{{ item.tag }}</a></li>
-              <li><a href=""><i class="fa fa-clock-o"></i>{{ formatDate(item.date) }}</a></li>
-            </ul>
-            <a href="" class="card__title">{{ item.title }}</a>
-            <ul class="card__meta card__meta--last">
-              <li><a href=""><i class="fa fa-twitter"></i>Share</a></li>
-            </ul>
-          </div>
+  <div class="container" v-for="(item, index) in items" :key="index">
+    <div class="card__image">
+      <img :src="`/img/img${index + 1}.jpg`" alt="">
+      <div class="card__overlay" :class="index % 2 === 0 ? 'blue' : 'indigo'">
+        <div class="card__overlay-content">
+          <ul class="card__meta">
+            <li><a href=""><i class="fa fa-tag"></i>{{ item.tag }}</a></li>
+            <li><a href=""><i class="fa fa-clock-o"></i>{{ formatDate(item.date) }}</a></li>
+          </ul>
+          <a href="" class="card__title">{{ item.title }}</a>
         </div>
       </div>
     </div>
@@ -25,8 +20,8 @@ import moment from 'moment';
 
 const items = [
   { tag: "タグ1", title: "タイトル1", date: "20230331" },
-//  { tag: "タグ2", title: "タイトル2", date: "20230101" },
-//  { tag: "タグ3", title: "タイトル3", date: "20230101" },
+  { tag: "タグ2", title: "タイトル2", date: "20230101" },
+  { tag: "タグ3", title: "タイトル3", date: "20230101" },
 ];
 const formatDate = (date: string): string => {
   const diffDays = moment().diff(date, "days");
@@ -44,19 +39,7 @@ const formatDate = (date: string): string => {
 $indigo: #5C6BC0;
 $blue: #29B6F6;
 
-*,*:after,*:before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  word-wrap: break-word;
-  hyphens: auto;
-}
-
 img {
-  height: auto;
   max-width: 100%;
 }
 
@@ -65,14 +48,10 @@ a:hover {
 }
 
 .container {
-  float: none;
   width: 100%;
-  padding-right: 0.2em;
-  padding-bottom: 0.4em;
-  @media screen and (min-width: 40.063em) {
-    float: left;
-    width: 33.333%;
-  }
+  max-width: 320px;
+  padding-right: 1em;
+  padding-bottom: 1em;
 }
 
 .card__image {
@@ -84,7 +63,6 @@ a:hover {
 
   img {
     display: block;
-    margin-bottom: 0;
     transition: all .25s ease-in-out;
   }
 
@@ -113,10 +91,7 @@ a:hover {
   bottom: 0;
   display: block;
   height: 100%;
-  left: 0;
   position: absolute;
-  right: 0;
-  top: 0;
   width: 100%;
   z-index: 1;
 }
@@ -132,19 +107,14 @@ a:hover {
 }
 
 .card__overlay-content {
-  position: absolute;
-  bottom: 0;
   padding: 1.5em;
   z-index: 3;
 }
 
 .card__meta {
-  margin-bottom: 6em;
-  &.card__meta--last {
-    margin-bottom: 0;
-  }
+  margin-bottom: 7em;
 }
-   
+
 li {
   color: #f8f8f8;
   display: inline;
