@@ -1,15 +1,13 @@
 <template>
   <div class="container" v-for="(item, index) in items" :key="index">
-    <div class="card__image">
-      <img :src="`/img/img${index + 1}.jpg`" alt="">
-      <div class="card__overlay" :class="index % 2 === 0 ? 'blue' : 'indigo'">
-        <div class="card__overlay-content">
-          <ul class="card__meta">
-            <li><a href=""><i class="fa fa-tag"></i>{{ item.tag }}</a></li>
-            <li><a href=""><i class="fa fa-clock-o"></i>{{ formatDate(item.date) }}</a></li>
-          </ul>
-          <a href="" class="card__title">{{ item.title }}</a>
-        </div>
+    <img :src="`/img/img${index + 1}.jpg`" alt="">
+    <div class="overlay" :class="index % 2 === 0 ? 'blue' : 'indigo'">
+      <div class="overlay-content">
+        <ul>
+          <li><a href=""><i class="fa fa-tag"></i> {{ item.tag }}</a></li>
+          <li><a href=""><i class="fa fa-clock-o"></i> {{ formatDate(item.date) }}</a></li>
+        </ul>
+        <a href="" class="card__title">{{ item.title }}</a>
       </div>
     </div>
   </div>
@@ -39,63 +37,6 @@ const formatDate = (date: string): string => {
 $indigo: #5C6BC0;
 $blue: #29B6F6;
 
-img {
-  max-width: 100%;
-}
-
-a:hover {
-  text-decoration: underline !important;
-}
-
-.container {
-  width: 100%;
-  max-width: 320px;
-  padding-right: 1em;
-  padding-bottom: 1em;
-}
-
-.card__image {
-  border-radius: 3px;
-  display: block;
-  min-height: 240px; 
-  overflow: hidden;
-  position: relative;
-
-  img {
-    display: block;
-    transition: all .25s ease-in-out;
-  }
-
-  &:hover > img {
-    transform: scale(1.2);
-  }
-}
-
-.card__title {
-  color: white;
-  display: inline-block;
-  font-size: 1.5em;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 0.75em;
-  text-decoration: none;
-  transition: all 0.3s ease-out;
-
-  &:hover {
-    color: rgba(white, 0.7);
-    text-decoration: none;
-  }
-}
-
-.card__overlay {
-  bottom: 0;
-  display: block;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-}
-
 .indigo {
   background-image: linear-gradient(to bottom, rgba($indigo, 0.1), rgba($indigo, 0.8));
   z-index: 2;
@@ -106,13 +47,56 @@ a:hover {
   z-index: 2;
 }
 
-.card__overlay-content {
-  padding: 1.5em;
-  z-index: 3;
+img {
+  max-width: 100%;
 }
 
-.card__meta {
-  margin-bottom: 7em;
+.container {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 3px;
+  min-height: 240px; 
+  overflow: clip;
+  position: relative;
+  margin: 10px;
+  img {
+    display: block;
+    transition: all .25s ease-in-out;
+  }
+  &:hover > img {
+    transform: scale(1.2);
+  }
+}
+
+.card__title {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: all 0.3s ease-out;
+  &:hover {
+    color: rgba(white, 0.7);
+    text-decoration: none;
+  }
+}
+
+.overlay {
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+}
+
+.overlay-content {
+  padding: 1.5em;
+  z-index: 3;
+  a:hover {
+  text-decoration: underline;
+  }
+  ul {
+    margin-bottom: 7em;
+  }
 }
 
 li {
