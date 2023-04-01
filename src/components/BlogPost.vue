@@ -7,7 +7,7 @@
           <li><a href=""><i class="fa fa-tag"></i> {{ item.tag }}</a></li>
           <li><a href=""><i class="fa fa-clock-o"></i> {{ formatDate(item.date) }}</a></li>
         </ul>
-        <RouterLink :to="'/posts/' + item.date + '/'" class="card__title">{{ item.title }}</RouterLink>
+        <RouterLink :to="'/posts/' + item.date" class="card__title">{{ item.title }}</RouterLink>
       </div>
     </div>
   </div>

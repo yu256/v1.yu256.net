@@ -13,9 +13,9 @@ const toggleNav = () => {
       <nav :class="{ active: navActive }">
         <ul>
           <li><RouterLink to="/" @click="toggleNav"><i class="fa fa-home">&nbsp;&nbsp;ホーム</i></RouterLink></li>
-          <li><RouterLink to="/blog/" @click="toggleNav"><i class="fa fa-pencil-square-o">ブログ</i></RouterLink></li>
-		  <li><RouterLink to="/blog/" @click="toggleNav"><i class="fa fa-pencil-square-o">TODO</i></RouterLink></li>
-		  <li><RouterLink to="/blog/" @click="toggleNav"><i class="fa fa-pencil-square-o">TODO</i></RouterLink></li>
+          <li><RouterLink to="/blog" @click="toggleNav"><i class="fa fa-pencil-square-o">ブログ</i></RouterLink></li>
+		  <li><RouterLink to="/blog" @click="toggleNav"><i class="fa fa-pencil-square-o">TODO</i></RouterLink></li>
+		  <li><RouterLink to="/blog" @click="toggleNav"><i class="fa fa-pencil-square-o">TODO</i></RouterLink></li>
         </ul>
       </nav>
       <button @click="toggleNav" :class="{ active: navActive }" title="メニューを開く" type="button"><span></span><span></span><span></span></button>
