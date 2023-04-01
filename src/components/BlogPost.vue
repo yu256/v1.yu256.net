@@ -7,7 +7,7 @@
           <li><a href=""><i class="fa fa-tag"></i> {{ item.tag }}</a></li>
           <li><a href=""><i class="fa fa-clock-o"></i> {{ formatDate(item.date) }}</a></li>
         </ul>
-        <a href="" class="card__title">{{ item.title }}</a>
+        <RouterLink :to="'/posts/' + item.date + '/'" class="card__title">{{ item.title }}</RouterLink>
       </div>
     </div>
   </div>
@@ -17,9 +17,9 @@
 import moment from 'moment';
 
 const items = [
-  { tag: "タグ1", title: "タイトル1", date: "20230331" },
-  { tag: "タグ2", title: "タイトル2", date: "20230101" },
-  { tag: "タグ3", title: "タイトル3", date: "20230101" },
+  { tag: "todo", title: "ブログを開設しました", date: "20230401" },
+//  { tag: "todo", title: "タイトル2", date: "20230101" },
+//  { tag: "todo", title: "タイトル3", date: "20230101" },
 ];
 const formatDate = (date: string): string => {
   const diffDays = moment().diff(date, "days");
@@ -67,7 +67,6 @@ img {
 
 .card__title {
   color: white;
-  font-size: 1.5em;
   font-weight: 700;
   line-height: 1.2;
   transition: all 0.3s ease-out;
