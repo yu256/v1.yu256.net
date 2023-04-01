@@ -23,13 +23,10 @@ const items = [
 ];
 const formatDate = (date: string): string => {
   const diffDays = moment().diff(date, "days");
-  if (diffDays < 1) {
-    return "今日";
-  } else if (diffDays === 1) {
-    return "昨日";
-  } else {
-    return `${diffDays}日前`;
-  }
+  return diffDays === 0 ? "今日"
+    : diffDays === 1 ? "昨日"
+    : diffDays < 31 ? `${diffDays}日前`
+    : moment(date).format("YYYY/MM/DD");
 }
 </script>
 
