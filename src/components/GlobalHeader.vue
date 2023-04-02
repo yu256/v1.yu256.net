@@ -25,7 +25,6 @@ const toggleNav = () => {
 
 <style scoped lang="scss">
 header {
-	background-color: white;
 	width: 100%;
 	height: 50px;
 	position: fixed;
@@ -33,6 +32,18 @@ header {
 	left: 0;
 	right: 0;
 	z-index: 999;
+	backdrop-filter: blur(5px);
+	:after {
+  	content: "";
+  	display: block;
+	background-color: gray;
+  	width: 100%;
+  	height: 0.5px;
+  	position: absolute;
+  	bottom: 0;
+  	left: 0;
+  	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	}
 	div {
 		padding: 0 20px;
 		display: flex;
