@@ -61,6 +61,7 @@ header {
 			transform: translateX(100%); 
 			background-color: #f6ffde;
 			transition: ease .4s;
+			z-index: 2;
 			&.active {
 				transform: translateX(0);
 			}
