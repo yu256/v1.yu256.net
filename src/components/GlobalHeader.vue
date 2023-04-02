@@ -33,6 +33,7 @@ header {
 	right: 0;
 	z-index: 999;
 	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
 	:after {
   	content: "";
   	display: block;
