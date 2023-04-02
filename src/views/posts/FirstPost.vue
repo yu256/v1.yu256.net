@@ -1,5 +1,5 @@
 <template>
-    <div class="date">2022/4/1</div>
+    <div class="date">2023/4/1</div>
     <main>
         <h1>ブログをつくりました</h1>
         <h2><p>

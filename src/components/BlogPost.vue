@@ -18,7 +18,7 @@ import moment from 'moment';
 
 const items = [
   { tag: "todo", title: "ブログを開設しました", date: "20230401" },
-//  { tag: "todo", title: "タイトル2", date: "20230101" },
+  { tag: "todo", title: "ラップトップを買いました", date: "20230402" },
 //  { tag: "todo", title: "タイトル3", date: "20230101" },
 ];
 const formatDate = (date: string): string => {
