@@ -34,17 +34,7 @@ header {
 	z-index: 999;
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
-	:after {
-  	content: "";
-  	display: block;
-	background-color: gray;
-  	width: 100%;
-  	height: 0.5px;
-  	position: absolute;
-  	bottom: 0;
-  	left: 0;
-  	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-	}
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
 	div {
 		padding: 0 20px;
 		display: flex;
