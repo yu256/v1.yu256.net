@@ -112,10 +112,6 @@ body {
 	}
 }
 
-html {
-	background-color: #f9f4f4;
-}
-
 a {
 	text-decoration: none;
 }
@@ -136,4 +132,17 @@ main {
 	background: #f7ffdb;
 	box-shadow:	18px 18px 35px #d2d9ba,
 				-18px -18px 35px #fffffc;
+}
+
+.dark {
+    color: #f9f4f4;
+    a {
+        color: #ff9;
+    }
+    .title {
+        color: #000;
+        border-radius: 50px;
+        background: #a6ad76;
+        box-shadow:  20px 20px 60px #8d9364, -20px -20px 60px #bfc788;
+    }
 }

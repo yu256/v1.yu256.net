@@ -151,4 +151,19 @@ header {
 		}
 	}
 }
+
+.dark {
+	span {
+		background-color: aqua;
+	}
+	a {
+		color: white;
+	}
+	nav {
+		background-color: rgb(28, 41, 70);
+		@media screen and (min-width: 960px) {
+			background-color: transparent;
+		}
+	}
+}
 </style>

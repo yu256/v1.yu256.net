@@ -1,5 +1,5 @@
 <template>
-	<button @click="changeTheme" title="テーマを変更する" type="button">{{ buttonText }}</button>
+	<button @click="changeTheme" title="テーマを変更する" type="button" :class="{ dark: props.theme === 'dark' }">{{ buttonText }}</button>
 </template>
   
 <script lang="ts" setup>
@@ -39,5 +39,10 @@ button {
   	right: 2em;
 	font-size: 1.5em;
 	background: #ffffff;
+	z-index: 10;
+	transition: background-color 0.5s ease;
+}
+.dark {
+	background: rgb(28, 41, 70);
 }
 </style>
