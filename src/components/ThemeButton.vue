@@ -35,8 +35,8 @@ button {
 	width: 80px;
 	height: 80px;
 	border-radius: 50px;
-  	bottom: 2em;
-  	right: 2em;
+  	bottom: 1em;
+  	right: 1em;
 	font-size: 1.5em;
 	background: #ffffff;
 	z-index: 10;

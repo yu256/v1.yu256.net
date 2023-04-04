@@ -27,6 +27,10 @@
         <ul class="ul1">
           <li><a rel="me" href="https://github.com/yu256">@yu256</a></li>
         </ul>
+        <p class="sns"><i class="fa fa-discord" aria-hidden="true"></i> Discord</p>
+        <ul class="ul1">
+          <li><a rel="me" href="https://discord.com/users/636174674295914519">ゆー#5227</a></li>
+        </ul>
         <p class="sns"><i class="fa fa-keybase" aria-hidden="true"></i> Keybase</p>
         <ul class="ul1">
           <li><a rel="me" href="https://keybase.io/yu1024">@yu1024</a></li>
@@ -40,7 +44,7 @@
           <li><a href="mailto:yu@yu256.net">yu@yu256.net</a></li>
         </ul>
       </div>
-      <h2 class="title"><i class="fa fa-amazon" aria-hidden="true"></i>干し芋のリスト</h2>
+      <h2 class="title">干し芋のリスト</h2>
       <div class="space">
         <ul class="ul1">
           <li><a href="https://www.amazon.jp/hz/wishlist/ls/3HOBLVBUU8DP9?ref_=wl_share">ほしい物リスト</a></li>
