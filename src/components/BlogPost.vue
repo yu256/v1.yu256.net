@@ -58,7 +58,7 @@ img {
   margin: 10px;
   img {
     display: block;
-    transition: all .25s ease-in-out;
+    transition: all 0.25s ease-in-out;
   }
   &:hover > img {
     transform: scale(1.2);

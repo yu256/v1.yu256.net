@@ -4,22 +4,23 @@ const navActive = ref(false)
 const toggleNav = () => {
   navActive.value = !navActive.value
 }
+const deactiveNav = () => {
+	navActive.value = false
+}
 </script>
 
 <template>
   <header>
-    <div>
-      <h1><RouterLink to="/">ゆーねっと</RouterLink></h1>
-      <nav :class="{ active: navActive }">
-        <ul>
-          <li><RouterLink to="/" @click="toggleNav"><i class="fa fa-home">&nbsp;&nbsp;ホーム</i></RouterLink></li>
-          <li><RouterLink to="/blog" @click="toggleNav"><i class="fa fa-pencil-square-o">ブログ</i></RouterLink></li>
-		  <li><RouterLink to="/blog" @click="toggleNav"><i class="fa fa-pencil-square-o">TODO</i></RouterLink></li>
-		  <li><RouterLink to="/blog" @click="toggleNav"><i class="fa fa-pencil-square-o">TODO</i></RouterLink></li>
-        </ul>
-      </nav>
-      <button @click="toggleNav" :class="{ active: navActive }" title="メニューを開く" type="button"><span></span><span></span><span></span></button>
-    </div>
+    <h1><RouterLink to="/">ゆーねっと</RouterLink></h1>
+    <nav :class="{ active: navActive }">
+    <ul>
+        <li><RouterLink to="/" @click="deactiveNav"><i class="fa fa-home">&nbsp;&nbsp;ホーム</i></RouterLink></li>
+        <li><RouterLink to="/blog" @click="deactiveNav"><i class="fa fa-pencil-square-o">ブログ</i></RouterLink></li>
+		<li><RouterLink to="/blog" @click="deactiveNav"><i class="fa fa-pencil-square-o">TODO</i></RouterLink></li>
+		<li><RouterLink to="/blog" @click="deactiveNav"><i class="fa fa-pencil-square-o">TODO</i></RouterLink></li>
+    </ul>
+    </nav>
+    <button @click="toggleNav" :class="{ active: navActive }" title="メニューを開く" type="button"><span></span><span></span><span></span></button>
   </header>
 </template>
 
@@ -28,115 +29,113 @@ header {
 	width: 100%;
 	height: 50px;
 	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
 	z-index: 999;
+	top: 0;
+	right: 0;
+	left: 0;
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
-	div {
-		padding: 0 20px;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		height: inherit;
-		position: relative;
-		nav {
-			position: absolute;
-			right: 0;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100vh;
-			transform: translateX(100%); 
-			background-color: #f6ffde;
-			transition: ease .4s;
-			z-index: 2;
-			&.active {
-				transform: translateX(0);
-			}
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	h1 {
+		margin-left: 1em;
+	}
+	nav {
+		position: absolute;
+		right: 0;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 35vh;
+		transform: translateY(-100%); 
+		background-color: #f6ffde;
+		transition: ease .4s;
+		z-index: 2;
+		&.active {
+			transform: translateY(-50%);
+		}
+		@media screen and (min-width: 960px) {
+			position: static;
+			transform: initial;
+			background-color: inherit;
+			height: inherit;
+			display: flex;
+			width: 50%;
+			margin-right: 1em;
+		}
+		ul {
+			padding-top: 250px;
+			padding-bottom: 200px;
+			list-style: none;
 			@media screen and (min-width: 960px) {
-				position: static;
-				transform: initial;
-				background-color: inherit;
-				height: inherit;
+				padding-top: inherit;
+				padding-bottom: inherit;
+				width: 100%;
 				display: flex;
-				justify-content: end;
-				width: 50%;
+				align-items: center;
+				height: initial;
+				justify-content: space-between;
 			}
-			ul {
-				padding-top: 250px;
-				padding-bottom: 200px;
-				list-style: none;
-				@media screen and (min-width: 960px) {
-					padding-top: inherit;
-					padding-bottom: inherit;
+			li {
+				a {
+					color: black;
 					width: 100%;
-					display: flex;
-					align-items: center;
-					height: initial;
-					justify-content: space-between;
+					display: block;
+					text-align: center;
+					font-size: 20px;
+					margin-bottom: 24px;
+					@media screen and (min-width: 960px) {
+							margin-bottom: 0;
+					}
 				}
-				li {
-					a {
-						color: black;
-						width: 100%;
-						display: block;
-						text-align: center;
-						font-size: 20px;
-						margin-bottom: 24px;
-						@media screen and (min-width: 960px) {
-								margin-bottom: 0;
-						}
-					}
-					&:last-child a {
-						margin-bottom: 0;
-					}
+				&:last-child a {
+					margin-bottom: 0;
 				}
 			}
 		}
-		button {
-			width: 48px;
-			height: 100%;
-			background-color: transparent;
-			border-color: transparent;
-			z-index: 9999;
-			&.active {
-				transform: translateX(0);
-					span {
-						&:nth-child(1) {
-							top: 5px;
-							transform: rotate(45deg);
-						}
-						&:nth-child(2) {
-							opacity: 0;
-						}
-						&:nth-child(3) {
-							top: -13px;
-							transform: rotate(-45deg);
-						}
+	}
+	button {
+		width: 48px;
+		height: 100%;
+		background-color: transparent;
+		border-color: transparent;
+		z-index: 9999;
+		&.active {
+			transform: translateX(0);
+				span {
+					&:nth-child(1) {
+						top: 5px;
+						transform: rotate(405deg);
 					}
+					&:nth-child(2) {
+						opacity: 0;
+					}
+					&:nth-child(3) {
+						top: -13px;
+						transform: rotate(315deg);
+					}
+				}
+		}
+		@media screen and (min-width: 960px) {
+			display: none;
+		}
+		span {
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+			position: relative;
+			transition: ease 0.5s;
+			display: block;
+			&:nth-child(1) {
+				top: 0;
 			}
-			@media screen and (min-width: 960px) {
-				display: none;
+			&:nth-child(2) {
+				margin: 8px 0;
 			}
-			span {
-				width: 100%;
-				height: 1px;
-				background-color: #000;
-				position: relative;
-				transition: ease .4s;
-				display: block;
-				&:nth-child(1) {
-					top: 0;
-				}
-				&:nth-child(2) {
-					margin: 8px 0;
-				}
-				&:nth-child(3) {
-					top: 0;
-				}
+			&:nth-child(3) {
+				top: 0;
 			}
 		}
 	}
@@ -144,7 +143,7 @@ header {
 
 .dark {
 	span {
-		background-color: aqua;
+		background-color: aliceblue;
 	}
 	a {
 		color: white;
