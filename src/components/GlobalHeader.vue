@@ -52,10 +52,10 @@ header {
 		transform: translateY(-100%); 
 		background-color: white;
 		transition: ease .4s;
-		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
 		z-index: 2;
 		&.active {
 			transform: translateY(-50%);
+			box-shadow: 0 3px 0 rgba(0, 0, 0, 0.05);
 		}
 		@media screen and (min-width: 960px) {
 			position: static;
