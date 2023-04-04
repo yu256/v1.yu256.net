@@ -18,10 +18,14 @@ watchEffect(() => {
     body.style.backgroundColor = theme.value === 'dark' ? 'rgba(15,23,42)' : '#f9f4f4'
   }
 })
+//ダブルタップでズームされるのを防ぐ
+const handleDoubleClick = (event: MouseEvent): void => {
+  event.preventDefault();
+};
 </script>
 
 <template>
-	<div :class="theme">
+	<div @dblclick="handleDoubleClick" :class="theme">
 		<ThemeButton :theme="theme" @theme-changed="onThemeChanged" />
 		<GlobalHeader />
 		<RouterView />

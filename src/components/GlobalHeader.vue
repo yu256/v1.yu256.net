@@ -33,8 +33,8 @@ header {
 	top: 0;
 	right: 0;
 	left: 0;
-	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
+	backdrop-filter: blur(5px);
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
 	display: flex;
 	align-items: center;
