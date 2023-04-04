@@ -50,8 +50,9 @@ header {
 		width: 100%;
 		height: 35vh;
 		transform: translateY(-100%); 
-		background-color: #f6ffde;
+		background-color: aliceblue;
 		transition: ease .4s;
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
 		z-index: 2;
 		&.active {
 			transform: translateY(-50%);
@@ -113,7 +114,7 @@ header {
 						opacity: 0;
 					}
 					&:nth-child(3) {
-						top: -13px;
+						top: -15px;
 						transform: rotate(315deg);
 					}
 				}
