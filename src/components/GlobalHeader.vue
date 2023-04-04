@@ -48,13 +48,12 @@ header {
 		left: 0;
 		top: 0;
 		width: 100%;
-		height: 35vh;
 		transform: translateY(-100%); 
 		background-color: white;
 		transition: ease .4s;
 		z-index: 2;
 		&.active {
-			transform: translateY(-50%);
+			transform: translateY(0);
 			box-shadow: 0 3px 0 rgba(0, 0, 0, 0.05);
 		}
 		@media screen and (min-width: 960px) {
