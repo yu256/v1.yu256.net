@@ -50,7 +50,7 @@ header {
 		width: 100%;
 		height: 35vh;
 		transform: translateY(-100%); 
-		background-color: aliceblue;
+		background-color: white;
 		transition: ease .4s;
 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
 		z-index: 2;
