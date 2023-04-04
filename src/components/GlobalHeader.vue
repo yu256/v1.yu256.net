@@ -111,6 +111,7 @@ header {
 						transform: rotate(405deg);
 					}
 					&:nth-child(2) {
+						transform: translateX(-200%);
 						opacity: 0;
 					}
 					&:nth-child(3) {

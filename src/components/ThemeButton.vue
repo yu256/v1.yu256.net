@@ -40,7 +40,8 @@ button {
 	font-size: 1.5em;
 	background: #ffffff;
 	z-index: 10;
-	transition: background-color 0.5s ease;
+	transition: 1s ease;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
 }
 .dark {
 	background: rgb(28, 41, 70);
