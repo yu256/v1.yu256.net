@@ -111,6 +111,10 @@ body {
 	margin: 0;
 	font-size: 1.2em;
 	font-family: 'ZenMaruGothic', sans-serif;
+    transition: 1s ease;
+    &:not(.loaded) {
+        transition: none
+    }
 }
 
 a {
