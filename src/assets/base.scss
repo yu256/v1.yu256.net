@@ -111,7 +111,7 @@ body {
 	margin: 0;
 	font-size: 1.2em;
 	font-family: 'ZenMaruGothic', sans-serif;
-    transition: 1s ease;
+    transition: 0.7s ease;
     &:not(.loaded) {
         transition: none
     }
@@ -119,6 +119,7 @@ body {
 
 a {
 	text-decoration: none;
+    transition: 0.7s ease;
 }
 
 main {
@@ -128,6 +129,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	margin-top: 45px;
+    transition: 0.7s ease;
 }
 
 .title {
@@ -136,6 +138,7 @@ main {
 	border-radius: 70px;
 	background: #f7ffdb;
 	box-shadow:	18px 18px 35px #d2d9ba, -18px -18px 35px #fffffc;
+    transition: 0.7s ease;
 }
 
 .dark {

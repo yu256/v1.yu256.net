@@ -10,7 +10,7 @@ const props = defineProps({
 })
   
 const buttonText = computed(() => {
-    return props.theme === 'light' ? '🌙' : '🌅'
+    return props.theme === 'light' ? '☽' : '☀️'
 })
 
 const { emit } = getCurrentInstance()!
