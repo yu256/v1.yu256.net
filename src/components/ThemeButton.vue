@@ -1,7 +1,7 @@
 <template>
-	<button @click="changeTheme" title="テーマを変更する" type="button" :class="{ dark: props.theme === 'dark' }">{{ buttonText }}</button>
+	<button @click="changeTheme" title="テーマを変更する" type="button" :class="{ dark: props.theme === 'dark' }"><i :class="buttonIcon"></i></button>
 </template>
-  
+
 <script lang="ts" setup>
 import { watch, computed, getCurrentInstance } from 'vue'
 
@@ -9,8 +9,8 @@ const props = defineProps({
 	theme: String,
 })
   
-const buttonText = computed(() => {
-    return props.theme === 'light' ? '☽' : '☀️'
+const buttonIcon = computed(() => {
+    return props.theme === 'light' ? 'fa fa-moon-o' : 'fa fa-sun-o'
 })
 
 const { emit } = getCurrentInstance()!
