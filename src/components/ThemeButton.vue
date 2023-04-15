@@ -1,49 +1,56 @@
 <template>
-	<button @click="changeTheme" title="テーマを変更する" type="button" :class="{ dark: props.theme === 'dark' }"><i :class="buttonIcon"></i></button>
+  <button
+    @click="changeTheme"
+    title="テーマを変更する"
+    type="button"
+    :class="{ dark: props.theme === 'dark' }"
+  >
+    <i :class="buttonIcon"></i>
+  </button>
 </template>
 
 <script lang="ts" setup>
-import { watch, computed, getCurrentInstance } from 'vue'
+import { watch, computed, getCurrentInstance } from 'vue';
 
 const props = defineProps({
-	theme: String,
-})
-  
-const buttonIcon = computed(() => {
-    return props.theme === 'light' ? 'fa fa-moon-o' : 'fa fa-sun-o'
-})
+  theme: String,
+});
 
-const { emit } = getCurrentInstance()!
+const buttonIcon = computed(() => {
+  return props.theme === 'light' ? 'fa fa-moon-o' : 'fa fa-sun-o';
+});
+
+const { emit } = getCurrentInstance()!;
 
 const changeTheme = () => {
-	const newTheme = props.theme === 'dark' ? 'light' : 'dark'
-	emit('theme-changed', newTheme)
-}
+  const newTheme = props.theme === 'dark' ? 'light' : 'dark';
+  emit('theme-changed', newTheme);
+};
 
 watch(
-	() => props.theme,
-	(newTheme, oldTheme) => {
-		newTheme !== oldTheme && emit('theme-changed', newTheme)
-	}
-)
+  () => props.theme,
+  (newTheme, oldTheme) => {
+    newTheme !== oldTheme && emit('theme-changed', newTheme);
+  }
+);
 </script>
 
 <style scoped>
 button {
-	position: fixed;
-	border: none;
-	width: 80px;
-	height: 80px;
-	border-radius: 50px;
-  	bottom: 1em;
-  	right: 1em;
-	font-size: 1.5em;
-	background: #ffffff;
-	z-index: 10;
-	transition: 1s ease;
-	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  border: none;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  bottom: 1em;
+  right: 1em;
+  font-size: 1.5em;
+  background: #ffffff;
+  z-index: 10;
+  transition: 1s ease;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
 }
 .dark {
-	background: rgb(28, 41, 70);
+  background: rgb(28, 41, 70);
 }
 </style>
