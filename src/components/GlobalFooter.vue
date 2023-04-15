@@ -8,6 +8,6 @@
 <style scoped lang="scss">
 footer {
 	text-align: center;
-	margin: 30px;
+	padding: 30px;
 }
 </style>

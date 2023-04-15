@@ -28,7 +28,7 @@ const deactiveNav = () => {
 header {
 	width: 100%;
 	height: 50px;
-	position: fixed;
+	position: sticky;
 	z-index: 999;
 	top: 0;
 	right: 0;
