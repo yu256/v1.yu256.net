@@ -1,20 +1,25 @@
 {
-  "target": "es2020",
-  "module": "esnext",
-  "strict": true,
-  "lib": ["es2020", "dom"],
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "include": ["vite.config.*", "vitest.config.*", "cypress.config.*", "playwright.config.*"],
   "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "useDefineForClassFields": true,
+    "composite": true,
+    "types": ["node"],
+    "lib": ["es2020", "dom"],
+    "jsx": "preserve",
+    "noImplicitThis": true,
+    "strict": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "target": "es2020",
     "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
-  },
-
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+  }
 }
