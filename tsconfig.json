@@ -2,9 +2,10 @@
   "target": "es2020",
   "module": "esnext",
   "strict": true,
-  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "lib": ["es2020", "dom"],
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
   "compilerOptions": {
+    "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
