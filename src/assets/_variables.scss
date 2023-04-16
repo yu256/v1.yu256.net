@@ -1,0 +1,25 @@
+html {
+    --background: #f9f4f4;
+    --backgroundLighted: white;
+    --foreground: #000;
+    --shadow: #777;
+    --text: black;
+    --link: #0000ee;
+    --title-fg: black;
+    --title-bg: #f7ffdb;
+    --title-top-shadow: #fffffc;
+    --title-bottom-shadow: #d2d9ba;
+    
+    &.dark {
+        --background: rgba(15,23,42);
+        --backgroundLighted: rgb(28, 41, 70);
+        --foreground: aliceblue;
+        --shadow: rgb(28, 44, 78);
+        --text: #f9f4f4;
+        --link: rgb(250, 250, 137);
+        --title-fg: #c3c89f;
+        --title-bg: #262055;
+        --title-top-shadow: #2c2562;
+        --title-bottom-shadow: #201b48;
+    }
+}
