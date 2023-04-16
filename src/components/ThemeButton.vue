@@ -1,6 +1,6 @@
 <template>
   <button
-    @click="toggleDark()"
+    @click="toggleTheme()"
     title="テーマを変更する"
     type="button"
   >
@@ -16,6 +16,18 @@ const isDark = useDark()
 const toggleDark = useToggle(isDark)
 
 const buttonIcon = computed(() => isDark.value ? 'fa-sun-o' : 'fa-moon-o')
+
+let timeout: number | null = null
+
+function toggleTheme() {
+	if (timeout) window.clearTimeout(timeout);
+  document.body.classList.add('_themeChanging_');
+  toggleDark()
+
+	timeout = window.setTimeout(() => {
+		document.body.classList.remove('_themeChanging_');
+	}, 1000);
+}
 </script>
 
 <style scoped>
@@ -30,7 +42,6 @@ button {
   font-size: 1.5em;
   color: var(--foreground);
   background: var(--backgroundLighted);
-  transition: background-color 1s ease, color 1s ease !important;
   z-index: 10;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
 }

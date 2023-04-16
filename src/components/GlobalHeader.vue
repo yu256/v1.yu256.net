@@ -75,7 +75,7 @@ header {
     width: 100%;
     transform: translateY(-100%);
     background-color: var(--backgroundLighted);
-    transition: background-color ease 0.4s, transform ease 0.4s !important;
+    transition: transform ease 0.4s !important;
     z-index: 2;
     &.active {
       transform: translateY(0);
@@ -152,7 +152,6 @@ header {
       height: 2px;
       background-color: var(--foreground);
       position: relative;
-      transition: background-color ease 0.5s !important;
       display: block;
       &:nth-child(1) {
         top: 0;

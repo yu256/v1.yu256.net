@@ -9,14 +9,16 @@ body {
   margin: 0;
   font-size: 1.2em;
   font-family: 'ZenMaruGothic', sans-serif;
-  transition: background-color 1s ease !important;
   color: var(--text);
   background-color: var(--background);
+  
+  &._themeChanging_ {
+    transition: background-color 1s ease, color 1s ease !important;
+  }
 }
 
 a {
   text-decoration: none;
-  transition: 0.7s ease;
   color: var(--link);
 }
 
@@ -35,5 +37,4 @@ main {
   background: var(--title-bg);
   color: var(--title-fg);
   box-shadow: 18px 18px 35px var(--title-bottom-shadow), -18px -18px 35px var(--title-top-shadow);
-  transition: 0.7s ease;
 }

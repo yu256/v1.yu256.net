@@ -65,7 +65,6 @@ img {
   margin: 10px;
   img {
     display: block;
-    transition: all 0.25s ease-in-out;
   }
   &:hover > img {
     transform: scale(1.2);
@@ -76,7 +75,6 @@ img {
   color: white;
   font-weight: 700;
   line-height: 1.2;
-  transition: all 0.3s ease-out;
   &:hover {
     color: rgba(white, 0.7);
     text-decoration: none;
