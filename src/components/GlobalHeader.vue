@@ -153,6 +153,7 @@ header {
       background-color: var(--foreground);
       position: relative;
       display: block;
+      transition: transform ease 0.4s, opacity ease 0.4s, top ease 0.4s !important;
       &:nth-child(1) {
         top: 0;
       }
