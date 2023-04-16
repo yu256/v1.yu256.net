@@ -1,178 +1,5 @@
-/* 
-html5doctor.com Reset Stylesheet
-v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com 
-Twitter: @rich_clark
-*/
+@import "./variables";
 
-html,
-body,
-div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-abbr,
-address,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-samp,
-small,
-strong,
-sub,
-sup,
-var,
-b,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-body {
-  line-height: 1;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-nav ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-/* change colours to suit your needs */
-ins {
-  background-color: #ff9;
-  color: #000;
-  text-decoration: none;
-}
-
-/* change colours to suit your needs */
-mark {
-  background-color: #ff9;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-abbr[title],
-dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* change border colour to suit your needs */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #cccccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-input,
-select {
-  vertical-align: middle;
-}
-
-/* ここから */
 @font-face {
   font-family: 'ZenMaruGothic';
   src: url(/fonts/ZenMaruGothic-Regular.ttf) format('truetype');
@@ -182,15 +9,17 @@ body {
   margin: 0;
   font-size: 1.2em;
   font-family: 'ZenMaruGothic', sans-serif;
-  transition: 0.7s ease;
-  &:not(.loaded) {
-    transition: none;
+  color: var(--text);
+  background-color: var(--background);
+  
+  &._themeChanging_ {
+    transition: background-color 1s ease, color 1s ease !important;
   }
 }
 
 a {
   text-decoration: none;
-  transition: 0.7s ease;
+  color: var(--link);
 }
 
 main {
@@ -199,27 +28,13 @@ main {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  transition: 0.7s ease;
 }
 
 .title {
   font-size: 2em;
   margin: 20px;
   border-radius: 70px;
-  background: #f7ffdb;
-  box-shadow: 18px 18px 35px #d2d9ba, -18px -18px 35px #fffffc;
-  transition: 0.7s ease;
-}
-
-.dark {
-  color: #f9f4f4;
-  a {
-    color: rgb(250, 250, 137);
-  }
-  .title {
-    color: #c3c89f;
-    border-radius: 50px;
-    background: #262055;
-    box-shadow: 11px 11px 22px #201b48, -11px -11px 22px #2c2562;
-  }
+  background: var(--title-bg);
+  color: var(--title-fg);
+  box-shadow: 18px 18px 35px var(--title-bottom-shadow), -18px -18px 35px var(--title-top-shadow);
 }

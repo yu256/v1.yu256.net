@@ -1,38 +1,33 @@
 <template>
   <button
-    @click="changeTheme"
+    @click="toggleTheme()"
     title="テーマを変更する"
     type="button"
-    :class="{ dark: props.theme === 'dark' }"
   >
-    <i :class="buttonIcon"></i>
+    <i class="fa" :class="buttonIcon" />
   </button>
 </template>
 
 <script lang="ts" setup>
-import { watch, computed, getCurrentInstance } from 'vue';
+import { computed } from 'vue'
+import { useDark, useToggle } from '@vueuse/core'
 
-const props = defineProps({
-  theme: String,
-});
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
 
-const buttonIcon = computed(() => {
-  return props.theme === 'light' ? 'fa fa-moon-o' : 'fa fa-sun-o';
-});
+const buttonIcon = computed(() => isDark.value ? 'fa-sun-o' : 'fa-moon-o')
 
-const { emit } = getCurrentInstance()!;
+let timeout: number | null = null
 
-const changeTheme = () => {
-  const newTheme = props.theme === 'dark' ? 'light' : 'dark';
-  emit('theme-changed', newTheme);
-};
+function toggleTheme() {
+	if (timeout) window.clearTimeout(timeout);
+  document.body.classList.add('_themeChanging_');
+  toggleDark()
 
-watch(
-  () => props.theme,
-  (newTheme, oldTheme) => {
-    newTheme !== oldTheme && emit('theme-changed', newTheme);
-  }
-);
+	timeout = window.setTimeout(() => {
+		document.body.classList.remove('_themeChanging_');
+	}, 1000);
+}
 </script>
 
 <style scoped>
@@ -45,12 +40,9 @@ button {
   bottom: 1em;
   right: 1em;
   font-size: 1.5em;
-  background: #ffffff;
+  color: var(--foreground);
+  background: var(--backgroundLighted);
   z-index: 10;
-  transition: 1s ease;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
-}
-.dark {
-  background: rgb(28, 41, 70);
 }
 </style>

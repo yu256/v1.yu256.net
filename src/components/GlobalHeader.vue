@@ -11,7 +11,7 @@ const deactiveNav = () => {
 
 <template>
   <header>
-    <h1><RouterLink to="/">ゆーねっと</RouterLink></h1>
+    <h1><RouterLink :class="$style.title" to="/">ゆーねっと</RouterLink></h1>
     <nav :class="{ active: navActive }">
       <ul>
         <li>
@@ -42,6 +42,13 @@ const deactiveNav = () => {
   </header>
 </template>
 
+<style lang="scss" module>
+.title {
+  font-size: 1.5em;
+  color: var(--foreground) !important;
+}
+</style>
+
 <style scoped lang="scss">
 header {
   width: 100%;
@@ -67,8 +74,8 @@ header {
     top: 0;
     width: 100%;
     transform: translateY(-100%);
-    background-color: white;
-    transition: ease 0.4s;
+    background-color: var(--backgroundLighted);
+    transition: transform ease 0.4s !important;
     z-index: 2;
     &.active {
       transform: translateY(0);
@@ -98,7 +105,7 @@ header {
       }
       li {
         a {
-          color: black;
+          color: var(--foreground);
           width: 100%;
           display: block;
           text-align: center;
@@ -143,9 +150,8 @@ header {
     span {
       width: 100%;
       height: 2px;
-      background-color: #000;
+      background-color: var(--foreground);
       position: relative;
-      transition: ease 0.5s;
       display: block;
       &:nth-child(1) {
         top: 0;
@@ -156,21 +162,6 @@ header {
       &:nth-child(3) {
         top: 0;
       }
-    }
-  }
-}
-
-.dark {
-  span {
-    background-color: aliceblue;
-  }
-  a {
-    color: white;
-  }
-  nav {
-    background-color: rgb(28, 41, 70);
-    @media screen and (min-width: 960px) {
-      background-color: transparent;
     }
   }
 }
