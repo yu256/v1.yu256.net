@@ -65,6 +65,7 @@ img {
   margin: 10px;
   img {
     display: block;
+    transition: transform 0.5s ease !important;
   }
   &:hover > img {
     transform: scale(1.2);
