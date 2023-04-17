@@ -1,33 +1,29 @@
 <template>
-  <button
-    @click="toggleTheme()"
-    title="テーマを変更する"
-    type="button"
-  >
+  <button @click="toggleTheme()" title="テーマを変更する" type="button">
     <i class="fa" :class="buttonIcon" />
   </button>
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
-import { useDark, useToggle } from '@vueuse/core'
+import { computed } from 'vue';
+import { useDark, useToggle } from '@vueuse/core';
 
-const isDark = useDark()
-const toggleDark = useToggle(isDark)
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
 
-const buttonIcon = computed(() => isDark.value ? 'fa-sun-o' : 'fa-moon-o')
+const buttonIcon = computed(() => (isDark.value ? 'fa-sun-o' : 'fa-moon-o'));
 
-let timeout: number | null = null
+let timeout: number | null = null;
 
-function toggleTheme() {
-	if (timeout) window.clearTimeout(timeout);
+const toggleTheme = () => {
+  if (timeout) window.clearTimeout(timeout);
   document.body.classList.add('_themeChanging_');
-  toggleDark()
+  toggleDark();
 
-	timeout = window.setTimeout(() => {
-		document.body.classList.remove('_themeChanging_');
-	}, 1000);
-}
+  timeout = window.setTimeout(() => {
+    document.body.classList.remove('_themeChanging_');
+  }, 1000);
+};
 </script>
 
 <style scoped>

@@ -3,8 +3,8 @@ import GlobalHeader from './components/GlobalHeader.vue';
 import GlobalFooter from './components/GlobalFooter.vue';
 import ThemeButton from './components/ThemeButton.vue';
 
-import "./assets/reset.scss"
-import "./assets/base.scss"
+import './assets/reset.scss';
+import './assets/base.scss';
 
 //ダブルタップでズームされるのを防ぐ
 const handleDoubleClick = (event: MouseEvent): void => {

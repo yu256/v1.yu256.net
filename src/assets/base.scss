@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 @font-face {
   font-family: 'ZenMaruGothic';
@@ -11,7 +11,7 @@ body {
   font-family: 'ZenMaruGothic', sans-serif;
   color: var(--text);
   background-color: var(--background);
-  
+
   &._themeChanging_ {
     transition: background-color 1s ease, color 1s ease !important;
   }
