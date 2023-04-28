@@ -1,6 +1,7 @@
 {
   "include": ["vite.config.*", "vitest.config.*", "cypress.config.*", "playwright.config.*"],
   "compilerOptions": {
+    "allowJs": true,
     "module": "esnext",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
